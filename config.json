@@ -8,6 +8,10 @@
   "boot": "auto",
   "init": false,
   "realtime": true,
-  "options": {},
-  "schema": {}
+  "options": {
+    "duration": "1m"
+  },
+  "schema": {
+    "duration": "str"
+  }
 }

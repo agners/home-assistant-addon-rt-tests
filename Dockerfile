@@ -11,4 +11,6 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy data for add-on
-CMD [ "/usr/bin/cyclictest", "--priority=90", "--duration=1m", "--threads=1", "--mlockall", "--histogram=US" ]
+COPY run.sh /
+RUN chmod a+x /run.sh
+CMD [ "/run.sh" ]
